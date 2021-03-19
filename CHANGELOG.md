@@ -1,4 +1,49 @@
+## 4.5.2 (March 16, 2021)
+
+BUG FIXES:
+
+- Fix updating `default_branch` on `github_repository` ([#719](https://github.com/integrations/terraform-provider-github/pull/719))
+
+
+## 4.5.1 (March 3, 2021)
+
+BUG FIXES:
+
+- Fix `github_branch_protection` import by repository node ID and pattern ([#713](https://github.com/integrations/terraform-provider-github/pull/713))
+- Add pagination when retrieving team members for `data_source_github_team` ([#702](https://github.com/integrations/terraform-provider-github/pull/702))
+
+
+## 4.5.0 (February 17, 2021)
+
+ENHANCEMENTS:
+
+- Add ability for `github_team_repository` to accept slug as a valid `team_id` ([#693](https://github.com/integrations/terraform-provider-github/pull/693))
+
+BUG FIXES:
+
+- Add more context to error messaging for `github_branch_protection` ([#691](https://github.com/integrations/terraform-provider-github/pull/691))
+- Satisfy linter recommendation for `github_branch_protection` ([#694](https://github.com/integrations/terraform-provider-github/pull/694))
+
+## 4.4.0 (February 5, 2021)
+
+BUG FIXES:
+
+- Add `create_default_maintainer` option to `github_team` ([#527](https://github.com/integrations/terraform-provider-github/pull/527)), ([#104](https://github.com/integrations/terraform-provider-github/pull/104)), ([#130](https://github.com/integrations/terraform-provider-github/pull/130))
+- Add diff-suppression option to `repository_collaborator` ([#683](https://github.com/integrations/terraform-provider-github/pull/683))
+
+
+## 4.3.2 (February 2, 2021)
+
+BUG FIXES:
+
+* Improved detection of repository name for `github_branch_protection` ([#684](https://github.com/integrations/terraform-provider-github/issues/684))
+* Reverts error handling in provider configuration ([#685](https://github.com/integrations/terraform-provider-github/issues/685))
+
 ## 4.3.1 (January 22, 2021)
+
+REGRESSIONS:
+
+- provider configuration breaks for individual accounts ([#678](https://github.com/integrations/terraform-provider-github/issues/678))
 
 BUG FIXES:
 
