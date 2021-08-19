@@ -7,7 +7,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/google/go-github/v36/github"
+	"github.com/google/go-github/v38/github"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 )
 
@@ -37,7 +37,7 @@ func buildProtectionRequest(d *schema.ResourceData) (*github.ProtectionRequest, 
 	if rcr, ok := d.GetOk("require_conversation_resolution"); ok {
 		// this is ugly. todo(kfcampbell): make this less ugly
 		newRcr := rcr.(bool)
-		req.RequireConversationResolution = &newRcr
+		req.RequiredConversationResolution = &newRcr
 	}
 
 	return req, nil
