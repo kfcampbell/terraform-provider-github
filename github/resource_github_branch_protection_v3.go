@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/google/go-github/v36/github"
+	"github.com/google/go-github/v38/github"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/validation"
 )
@@ -136,6 +136,11 @@ func resourceGithubBranchProtectionV3() *schema.Resource {
 				Default:  false,
 			},
 			"require_signed_commits": {
+				Type:     schema.TypeBool,
+				Optional: true,
+				Default:  false,
+			},
+			"require_conversation_resolution": {
 				Type:     schema.TypeBool,
 				Optional: true,
 				Default:  false,
