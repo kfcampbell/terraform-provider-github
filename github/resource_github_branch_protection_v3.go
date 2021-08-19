@@ -140,6 +140,11 @@ func resourceGithubBranchProtectionV3() *schema.Resource {
 				Optional: true,
 				Default:  false,
 			},
+			"require_conversation_resolution": {
+				Type:     schema.TypeBool,
+				Optional: true,
+				Default:  false,
+			},
 			"etag": {
 				Type:     schema.TypeString,
 				Computed: true,

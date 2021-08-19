@@ -772,6 +772,9 @@ type ProtectionRequest struct {
 	AllowForcePushes *bool `json:"allow_force_pushes,omitempty"`
 	// Allows deletion of the protected branch by anyone with write access to the repository.
 	AllowDeletions *bool `json:"allow_deletions,omitempty"`
+	// Requires all conversation threads on the pull request
+	// to be resolved before it can be merged to a protected branch.
+	RequireConversationResolution *bool `json:"required_conversation_resolution,omitempty"`
 }
 
 // RequiredStatusChecks represents the protection status of a individual branch.

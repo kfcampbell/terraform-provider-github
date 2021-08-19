@@ -34,6 +34,12 @@ func buildProtectionRequest(d *schema.ResourceData) (*github.ProtectionRequest, 
 	}
 	req.Restrictions = res
 
+	if rcr, ok := d.GetOk("require_conversation_resolution"); ok {
+		// this is ugly. todo(kfcampbell): make this less ugly
+		newRcr := rcr.(bool)
+		req.RequireConversationResolution = &newRcr
+	}
+
 	return req, nil
 }
 
